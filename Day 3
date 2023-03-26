@@ -1,0 +1,23 @@
+stdin <- file('stdin')
+open(stdin)
+
+N <- as.integer(trimws(readLines(stdin, n = 1, warn = FALSE), which = "both"))
+
+close(stdin)
+
+
+if(N %% 2 != 0){
+  cat("Weird")
+}else{
+  if(N > 20){
+    cat("Not Weird")
+  }else{
+   if(6 <= N & N <= 20){
+     cat("Weird")
+   }else{
+    if(2 <= N & N <= 5){
+      cat("Not Weird")
+    }
+   }
+  }
+}
